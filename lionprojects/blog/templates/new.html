@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+{%block content%}
+
+
+<h1>Write your Blog</h1>
+
+<form action="{%url 'create'%}" method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+    {{form.as_p}}
+    <button type="submit">submit</button>  
+
+</form>
+
+{%endblock%}
